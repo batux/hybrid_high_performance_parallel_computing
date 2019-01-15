@@ -157,6 +157,12 @@ gcloud compute instances list | awk 'NR>1 {print $4}' > hostfile
 
 # Distributed Parallel Computing results on Google Cloud Platform
 
+Run mpirun command to start distributed parallel computing.
+
+```console
+mpirun -np 4 -mca btl ^openib  --hostfile /home/batuxbey/openmpi/hostfile ./a.out
+```
+
 <img width="1436" alt="screen shot 2019-01-15 at 12 02 09 am" src="https://user-images.githubusercontent.com/2838457/51145685-ad505f80-1865-11e9-9ffd-87fffc07947d.png">
 
 
