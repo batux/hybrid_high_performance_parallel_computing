@@ -157,6 +157,10 @@ gcloud compute instances list | awk 'NR>1 {print $4}' > hostfile
 
 # Distributed Parallel Computing results on Google Cloud Platform
 
+Create a.out file. Compile "main.c" C file.
+
+mpicc -fopenmp main.c
+
 Run mpirun command to start distributed parallel computing.
 
 ```console
