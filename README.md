@@ -194,3 +194,4 @@ https://computing.llnl.gov/tutorials/openMP/
 https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
 https://www.codingame.com/playgrounds/349/introduction-to-mpi/non-blocking-communications---exercise
 https://hpc.llnl.gov/sites/default/files/DavidCronkSlides.pdf
+http://jakascorner.com/blog/2016/06/omp-for-scheduling.html
