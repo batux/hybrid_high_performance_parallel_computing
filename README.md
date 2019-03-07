@@ -188,3 +188,9 @@ https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.ptp.doc.user%2Fhtml
 https://github.com/open-mpi/ompi/issues/3158
 https://medium.com/swlh/openmp-on-ubuntu-1145355eeb2
 http://supercomputingblog.com/category/openmp/
+http://www.shodor.org/media/content/petascale/materials/UPModules/GameOfLife/Life_Module_Document_pdf.pdf
+http://www.red-ricap.org/documents/1071192/1486573/OpenMP_01_Introduction.pdf/2a2c91a8-60cf-4716-9ae4-57684a56e4b8
+https://computing.llnl.gov/tutorials/openMP/
+https://www3.ntu.edu.sg/home/ehchua/programming/cpp/gcc_make.html
+https://www.codingame.com/playgrounds/349/introduction-to-mpi/non-blocking-communications---exercise
+https://hpc.llnl.gov/sites/default/files/DavidCronkSlides.pdf
