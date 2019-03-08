@@ -183,7 +183,7 @@ ssh-keygen
 cat id_rsa.pub
 ```
 
-# 4- Add Master's SSH Key to Worker Machines
+# 4- Add Master's SSH Key to Worker Machines
 
 List compute engine instances
 
