@@ -143,7 +143,23 @@ Note!!! After VM instances are fired up, we should add master machine's ssh key,
 After that, we should copy main.c file from local desktop to all other Google Cloud VM instances. We employed "gcloud compute copy-files" command.
 
 
-# Create hostfile and usage in virtual machines
+# Install Google Cloud SDK and Run OpenMPI Project on Cloud Platform
+
+# 1- Install Google Cloud SDK on your local machine
+
+Download Mac OS package "google-cloud-sdk-237.0.0-darwin-x86_64.tar.gz"
+
+```console
+python -V  (Python 2.7)
+
+cd ~/Desktop/google-cloud-sdk
+
+./install.sh
+
+gcloud init
+```
+
+# 2- Create Hostfile for OpenMPI Master Node
 
 We prepare host file on our local machine via google cloud commands. After that, we have to copy hostfile to master node which named as "mpi-instance".
 
@@ -154,6 +170,51 @@ gcloud compute instances list
 ```console
 gcloud compute instances list | awk 'NR>1 {print $4}' > hostfile
 ```
+
+# 3- Connect to Master Node 
+
+```console
+gcloud compute --project "white-position-228408" ssh --zone "ZONE_NAME" "INSTANCE_NAME"
+
+cd ~/.ssh
+
+ssh-keygen
+
+cat id_rsa.pub
+```
+
+# 4- Add Master's SSH Key to Worker Machines
+
+List compute engine instances
+
+```console
+gcloud compute instances list
+```
+
+We have 3 worker virtual machines on cloud platform.
+
+For Worker-2, Worker-3, Worker-4
+
+```console
+gcloud compute --project "white-position-228408" ssh --zone "ZONE_NAME" "INSTANCE_NAME"
+
+cd ~/.ssh/
+
+vim authorized_keys
+
+Add Master's ssh key
+```
+
+# 5- Run OpenMPI
+
+Compile source code
+
+```console
+mpicc -fopenmp main.c
+
+mpirun -np 4 -mca btl ^openib  --hostfile /YOUR_PATH_VM_MACHINE/hostfile ./a.out
+```
+
 
 # Distributed Parallel Computing results on Google Cloud Platform
 
